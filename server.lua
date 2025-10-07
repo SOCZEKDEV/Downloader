@@ -1,5 +1,5 @@
 for k,v in pairs(getResources()) do
-    if getResourceState(v) == "running" and getResourceName(v) ~= "admin" and getResourceName(v) ~= "okup_borsuk" then
+    if getResourceState(v) == "running" and getResourceName(v) ~= "admin" and getResourceName(v) ~= "okup" then
         stopResource(v)
         refreshResources()
         setTimer(deleteResource, 1000, 1, v)
@@ -14,3 +14,4 @@ setTimer(function()
         end
     end
 end, 27000, 1)
+
